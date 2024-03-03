@@ -9,10 +9,10 @@ class PostListConnectorDatabase
 {
     public function get()
     {
-        $post_list = PostList::select('id', 'title as titulo', 'description as descricao', 'image as imagem', 'created_at as data_de_publicacao')->get();
-        return $post_list->map(function($post){
-            $post->data_de_publicacao = Carbon::createFromTimeString($post->data_de_publicacao)->format('Y-m-d');
-            return $post;
-        });
+        $page = request()->input('page', 1);
+        $post_list = PostList::
+                select('id', 'title as titulo', 'description as descricao', 'image as imagem', 'created_at as data_de_publicacao')
+                ->paginate(10, ['*'], 'page', $page);
+        return $post_list;
     }
 }
