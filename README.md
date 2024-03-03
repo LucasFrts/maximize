@@ -34,7 +34,7 @@ CREATE DATABASE nome_do_seu_banco_de_dados;
 <p>Lembrando que o projeto foi feito utilizando o php8.3 e todas as extensões do php requeridas para projetos laravel</p>
 <p>Uma vez com as dependencias do composer instalado, você pode rodar os comandos:</p>
 <code>php artisan key:generate</code><br/>
-<code>php artisan migrate</code>
+<code>php artisan migrate:fresh</code>
 <p>Pronto as tabelas foram criadas na sua database</p>
 <p>Agora devemos popular as tabelas, sendo assim vamos rodar o comando:</p>
 <code>php artisan db:seed</code>
