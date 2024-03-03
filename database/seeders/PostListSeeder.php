@@ -30,7 +30,7 @@ class PostListSeeder extends Seeder
                 [
                     'title' => 'Novos exames de bioquímica básica',
                     'image' => '/images/thumb_3.png',
-                    'description' => 'Para sua comodidade nós inauguramos mais uma unidade...',
+                    'description' => 'Simetra apresenta novos exames nas suas unidades.',
                     'created_at' => now()
                 ],
                 [
@@ -48,7 +48,7 @@ class PostListSeeder extends Seeder
                 [
                     'title' => 'Novos exames de bioquímica básica',
                     'image' => '/images/thumb_3.png',
-                    'description' => 'Para sua comodidade nós inauguramos mais uma unidade...',
+                    'description' => 'Simetra apresenta novos exames nas suas unidades.',
                     'created_at' => now()
                 ],
             ]
