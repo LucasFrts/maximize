@@ -30,8 +30,10 @@ CREATE DATABASE nome_do_seu_banco_de_dados;
 <h3>Passo 1 </h3>
 <p>Para iniciar vamos rodar o </p>
 <code>composer install</code>
-<p>lembrando que o projeto foi feito utilizando o php8.3 e todas as extensões do php requeridas para projetos laravel</p>
-<p>Uma vez com as dependencias do composer instalado, você pode rodar o comando:</p>
+<p>Lembrando que o projeto foi feito utilizando o php8.3 e todas as extensões do php requeridas para projetos laravel</p>
+<p>Crie um arquivo .env com base no .env.example</p>
+<p>Uma vez com as dependencias do composer instalado e o .env, você pode rodar os comandos:</p>
+<code>php artisan key:generate</code>
 <code>php artisan migrate</code>
 <p>Pronto as tabelas foram criadas na sua database</p>
 <p>Agora devemos popular as tabelas, sendo assim vamos rodar o comando:</p>
