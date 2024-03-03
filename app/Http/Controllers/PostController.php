@@ -35,9 +35,15 @@ class PostController extends Controller
     *                     @OA\Property(property="titulo", type="string", example="Nova unidade Simetra"),
     *                     @OA\Property(property="descricao", type="string", example="Para sua comodidade nós inauguramos mais uma unidade..."),
     *                     @OA\Property(property="imagem", type="string", example="images/thumb_1.png"),
-    *                     @OA\Property(property="data_de_publicacao", type="string", example=null),
+    *                     @OA\Property(property="data_de_publicacao", type="string", example="2024-03-03 16:34:53"),
     *                 )
     *             ),
+    *             @OA\Property(property="current_page", type="integer", example=1),
+    *             @OA\Property(property="last_page", type="integer", example=1),
+    *             @OA\Property(property="next_page_url", type="string", example=null),
+    *             @OA\Property(property="prev_page_url", type="string", example=null),
+    *             @OA\Property(property="last_page_url", type="string", example="http://localhost:8000/api/v1/posts?page=1"),
+    *             @OA\Property(property="first_page_url", type="string", example="http://localhost:8000/api/v1/posts?page=1"),
     *         ),
     *     ),
     *     @OA\Response(

@@ -51,11 +51,35 @@
                                                     },
                                                     "data_de_publicacao": {
                                                         "type": "string",
-                                                        "example": null
+                                                        "example": "2024-03-03 16:34:53"
                                                     }
                                                 },
                                                 "type": "object"
                                             }
+                                        },
+                                        "current_page": {
+                                            "type": "integer",
+                                            "example": 1
+                                        },
+                                        "last_page": {
+                                            "type": "integer",
+                                            "example": 1
+                                        },
+                                        "next_page_url": {
+                                            "type": "string",
+                                            "example": null
+                                        },
+                                        "prev_page_url": {
+                                            "type": "string",
+                                            "example": null
+                                        },
+                                        "last_page_url": {
+                                            "type": "string",
+                                            "example": "http://localhost:8000/api/v1/posts?page=1"
+                                        },
+                                        "first_page_url": {
+                                            "type": "string",
+                                            "example": "http://localhost:8000/api/v1/posts?page=1"
                                         }
                                     },
                                     "type": "object"
