@@ -1,0 +1,188 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Maximize test",
+        "description": "An API made to apply to maximize",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/v1/posts": {
+            "get": {
+                "tags": [
+                    "Posts"
+                ],
+                "summary": "Retorna posts",
+                "description": "Retorna uma lista de posts.",
+                "operationId": "a20e2b67c2b9c13dc94f25a7cff86d48",
+                "responses": {
+                    "200": {
+                        "description": "Posts retornados com sucesso",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean",
+                                            "example": true
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Posts returned successfully"
+                                        },
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "properties": {
+                                                    "id": {
+                                                        "type": "integer",
+                                                        "example": 1
+                                                    },
+                                                    "titulo": {
+                                                        "type": "string",
+                                                        "example": "Nova unidade Simetra"
+                                                    },
+                                                    "descricao": {
+                                                        "type": "string",
+                                                        "example": "Para sua comodidade nós inauguramos mais uma unidade..."
+                                                    },
+                                                    "imagem": {
+                                                        "type": "string",
+                                                        "example": "images/thumb_1.png"
+                                                    },
+                                                    "data_de_publicacao": {
+                                                        "type": "string",
+                                                        "example": null
+                                                    }
+                                                },
+                                                "type": "object"
+                                            }
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Erro interno do servidor",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean",
+                                            "example": false
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Erro interno do servidor"
+                                        },
+                                        "error": {
+                                            "type": "object",
+                                            "example": []
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/post/{id}": {
+            "get": {
+                "tags": [
+                    "Posts"
+                ],
+                "summary": "Retorna posts",
+                "description": "Retorna um post específico.",
+                "operationId": "e776d13238e3337e3ee8d4cfcd62dec0",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID do post",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Post retornado com sucesso",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean",
+                                            "example": true
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Post returned successfully"
+                                        },
+                                        "data": {
+                                            "properties": {
+                                                "titulo": {
+                                                    "type": "string",
+                                                    "example": "Nova unidade Simetra"
+                                                },
+                                                "descricao": {
+                                                    "type": "string",
+                                                    "example": "Para sua comodidade nós inauguramos mais uma unidade..."
+                                                },
+                                                "imagem": {
+                                                    "type": "string",
+                                                    "example": "images/banner_1.png"
+                                                },
+                                                "texto_completo": {
+                                                    "type": "string",
+                                                    "example": "<p>O laboratório Simetra traz mais uma novidade para sua clínica...</p>"
+                                                },
+                                                "data_de_publicacao": {
+                                                    "type": "string",
+                                                    "format": "date",
+                                                    "example": "2024-03-01"
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Erro interno do servidor",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean",
+                                            "example": false
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Erro interno do servidor"
+                                        },
+                                        "error": {
+                                            "type": "object",
+                                            "example": []
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
