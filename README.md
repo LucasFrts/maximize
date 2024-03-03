@@ -1,5 +1,6 @@
 <h2>Passos para execução do projeto</h2>
-<p>Primeiramente, é essencial conectar o seu banco de dados no .env seguindo o seguinte padrão:</p>
+<p>Primeiramente, crie um arquivo .env com base no .env.example</p>
+<p>em seguida essencial conecte o seu banco de dados no .env seguindo o seguinte padrão:</p>
 <code>
 DB_CONNECTION=mysql 
 DB_HOST=127.0.0.1 
@@ -31,8 +32,7 @@ CREATE DATABASE nome_do_seu_banco_de_dados;
 <p>Para iniciar vamos rodar o </p>
 <code>composer install</code>
 <p>Lembrando que o projeto foi feito utilizando o php8.3 e todas as extensões do php requeridas para projetos laravel</p>
-<p>Crie um arquivo .env com base no .env.example</p>
-<p>Uma vez com as dependencias do composer instalado e o .env, você pode rodar os comandos:</p>
+<p>Uma vez com as dependencias do composer instalado, você pode rodar o comando:</p>
 <code>php artisan key:generate</code>
 <code>php artisan migrate</code>
 <p>Pronto as tabelas foram criadas na sua database</p>
